@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GameControllerScript : MonoBehaviour
 {
-    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+    
     [SerializeField]
-    int stagesize = 50;
+    private int stagesize = 50;
     // Start is called before the first frame update
     void Start()
     {
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         GameObject obj = (GameObject)Resources.Load("Cube");
         for (int i = 2; i < stagesize;i += 2)
         {

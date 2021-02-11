@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CubeScript : MonoBehaviour
 {
-    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+    
     private int number;
     public LayerMask mask;
-    RaycastHit hit;
     void Start()
     {
+
+        RaycastHit hit;
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         GameObject obj = (GameObject)Resources.Load("Cube2");
         number = Random.Range(0, 3);
         if (this.transform.position.x < 3)
